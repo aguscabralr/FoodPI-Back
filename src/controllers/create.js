@@ -23,7 +23,6 @@ const postRecipe = async (req, res) => {
       analyzedInstructions: formatInstructions,
     };
 
-    if (title.length > 2) return res.status(400).send('Error en longitud del titulo');
     const newRecipeDB = await Recipes.create(newRecipe);
 
     if (diets.length) {
