@@ -5,7 +5,7 @@ const { Recipes, Diets, DietRecipe } = require('../db');
 const postRecipe = async (req, res) => {
   try {
     const { title, image, summary, healthScore, analyzedInstructions, diets } = req.body;
-  
+
     const formatInstructions = [{ "name": "", "steps": [] }];
     for (let i = 0; i < analyzedInstructions.length; i++) {
       const newStep = {};

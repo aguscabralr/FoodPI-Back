@@ -21,7 +21,7 @@ const allDiets = async (req, res) => {
           getDiets.add(recipe.diets[i]);
         };
       });
-  
+
       const dietsArr = Array.from(getDiets);
       await Diets.bulkCreate(dietsArr.map(diet => ({ name: diet })));
       allData = await Diets.findAll();
