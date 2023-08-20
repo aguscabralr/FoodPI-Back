@@ -1,7 +1,6 @@
 // Import model from DB;
 const { Recipes, Diets, DietRecipe } = require('../db');
 
-
 const postRecipe = async (req, res) => {
   try {
     const { title, image, summary, healthScore, analyzedInstructions, diets } = req.body;
